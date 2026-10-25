@@ -1,0 +1,10 @@
+# Virtual environment
+venv/
+
+# PyInstaller output (rebuild locally with `pyinstaller build.spec`)
+build/
+dist/
+
+# Python caches
+__pycache__/
+*.pyc

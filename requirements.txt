@@ -1,0 +1,23 @@
+# --- GUI ---
+PySide6>=6.6
+
+# --- WhisperX (ASR + forced alignment) ---
+# WhisperX pulls in faster-whisper, ctranslate2, pyannote pieces, etc.
+whisperx>=3.1
+
+# --- Torch: install the CUDA build BEFORE this file, see README.md ---
+# (listed here only so `pip check` doesn't complain; the README has the
+# actual install command with the correct CUDA index URL)
+torch>=2.1
+torchaudio>=2.1
+
+# --- ffmpeg fallback if the user has no system ffmpeg on PATH ---
+imageio-ffmpeg>=0.4.9
+
+# --- required so `transformers` (used by WhisperX for Japanese alignment)
+# doesn't crash on import: some transformers versions unconditionally
+# check torchcodec's installed version even if you never use it ---
+torchcodec>=0.1
+
+# --- packaging (only needed on the machine that builds the .exe) ---
+pyinstaller>=6.3
